@@ -2,42 +2,35 @@
 # CSCI 1260 — Project
 
 ## Project Instructions
-All project requirements, grading criteria, and submission details are provided on **D2L**.  
-Refer to D2L as the *authoritative source* for this assignment.
+The rules of mine sweeper are simple, First you pick tile that you think is not a bomb.
+then once some tiles are cleared you will see either a clear box or a number. 
+these numbers mean how many bombs are adjencent to that tile.
+If you think that found a bomb you flag it.
+You keep doing this until you flag all the mines.
 
-This repository is intentionally minimal. You are responsible for:
-- Creating the solution and projects
-- Designing the class structure
-- Implementing the required functionality
+## Board Sizes
+8x8 with 10 mines
+12x12 with 25 mines
+16x16 with 40 mines
 
----
+choose your board in the main menu
 
-## Getting Started (CLI)
+## input commands
+r = Reveal
+f = Flag
+q = quit
 
-You may use **Visual Studio**, **VS Code**, or the **terminal**.
+to reveal a tile you would use the command "r row col" 
+and the same for flag "f row col"
+if i wanted to reveal a tile in row 7 and column 9 I would use "r 7 9"
 
-### Create a solution
-```bash
-dotnet new sln -n ProjectName
-```
+## Seed
+enter any number to use a deterministic seed
+leave blank for a random seed
 
-### Create a project (example: console app)
-```bash
-dotnet new console -n ProjectName.App
-```
-
-### Add the project to the solution
-```bash
-dotnet sln add ProjectName.App
-```
-
-### Build and run
-```bash
-dotnet build
-dotnet run --project ProjectName.App
-```
-
-## Notes
-- Commit early and commit often.
-- Your repository history is part of your submission.
-- Update this README with build/run instructions specific to your project.
+## Board Symbols
+'#' = Hidden tile
+'f' = Flagged tile
+'.' = Revealed safe tile
+'1-8' = Revealed tile with adjencent mine(s)
+'b' = Bomb
